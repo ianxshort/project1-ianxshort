@@ -72,7 +72,43 @@ const destinationData = `[
         }
     }
 ]`;
+async function extractData(){
+    try{
+        const displayData=document.querySelector("#destination");
+        let dataResponse= await fetch("./data.json");
+        let destData=await dataResponse.json();
+        destData.forEach(destination=>{
+            const cardData=document.getElementById(destination.id)
 
+            cardData.innerHTML=+
+            `
+                <img src="${destination.image} alt=${destination.name}/>
+                <h2>${destination.name}<h2>
+                <p>${}
+            `
+
+
+
+        })
+
+
+
+
+
+    }
+
+    catch(error){
+
+
+
+
+    }
+
+
+
+
+
+}
     
     
     
