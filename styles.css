@@ -1,0 +1,73 @@
+.title{
+    text-align:center;
+    font-family:'Rock Salt', cursive;
+    display:flex;
+    color:white;
+    text-shadow:2px 2px 4px black;
+    font-stretch:expanded;
+    font-size:larger;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:center;
+    margin-bottom:10px;
+
+
+}
+body{
+
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    min-height:100vh;
+    
+}
+
+
+#destination{  
+    /*container for all of the cards */
+    height:60vh;
+    width:80vw;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto;
+
+
+    gap:5%;
+}
+
+.card{ /* individual boxes */
+    display:flex;
+    align-items:center;
+    background-color:white;
+    justify-content:center;
+
+    width:40%;
+    height:35vh;
+
+    border-radius: 50px 30px;
+    border:2px solid black;
+    position:relative;
+
+}
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    width: 60px; /* Adjust tape size */
+    height: 20px; /* Adjust tape height */
+    background: rgba(255, 229, 153, 0.8); /* Light yellowish "masking tape" color */
+    transform: rotate(-10deg); /* Slight angle for realism */
+    top: -10px; /* Position above the card */
+    left: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Second piece of tape */
+.card::after {
+    transform: rotate(10deg);
+    left: auto;
+    right: 20px;
+}
