@@ -19,7 +19,8 @@ body{
     background-position:center center;
     background-repeat:no-repeat;
     min-height:100vh;
-    
+    background-image:url('./DALL·E 2025-03-08 10.38.45 - A super minimalistic vintage-style dark background with a deep black or dark gray base. The design should have a hand-sketched, artistic look with sub.webp');
+    background-attachment: fixed;
 }
 
 
@@ -40,34 +41,61 @@ body{
 
 .card{ /* individual boxes */
     display:flex;
+    flex-direction:column;
     align-items:center;
-    background-color:white;
     justify-content:center;
+    background-size:cover;
+    background-position:center;
 
     width:40%;
     height:35vh;
 
-    border-radius: 50px 30px;
-    border:2px solid black;
+    border-radius: 50px  20px;
+    padding:20px;
+   
+    
+
+   
+
     position:relative;
+    overflow:visible; /* this will allow the gradient border to show up*/
+    text-align:center;
+    
+   
+
 
 }
-.card::before,
-.card::after {
+.card::after{
     content: "";
     position: absolute;
-    width: 60px; /* Adjust tape size */
-    height: 20px; /* Adjust tape height */
-    background: rgba(255, 229, 153, 0.8); /* Light yellowish "masking tape" color */
-    transform: rotate(-10deg); /* Slight angle for realism */
-    top: -10px; /* Position above the card */
-    left: 20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    top: -5px; /* adjusting the thickness of the gradient borders*/
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #008cff, #e100ff);
+    z-index: -1;
+    border-radius: inherit;
 }
 
-/* Second piece of tape */
-.card::after {
-    transform: rotate(10deg);
-    left: auto;
-    right: 20px;
+
+
+
+
+.card h2, .card p{
+    text-align:center;
+    z-index:2;
+    color:white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+
+
+}
+
+.card h2{
+    text-decoration:underline;
+    text-decoration-color: black;
+    font-size:40px;
+    -webkit-text-stroke:1px rgb(0, 0, 0);
+    text-decoration-thickness:3px;
+    font-style:italic;
+
 }

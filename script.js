@@ -6,12 +6,11 @@ async function extractData(){
         let destData=await dataResponse.json();
         destData.forEach(destination=>{
             const cardData=document.getElementById(destination.id)
-
+            cardData.style.backgroundImage = `url("${destination.image}")`;
             cardData.innerHTML=
             `
-                <img src="${destination.image}" alt="${destination.name}"/>
-                <h2>${destination.name}<h2>
-                <p>${destination.description}<p>
+                <h2>${destination.name}</h2>
+                <p>${destination.description}</p>
 
             `;
 
