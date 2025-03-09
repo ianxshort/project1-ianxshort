@@ -37,6 +37,15 @@ async function extractData(){
 
 }
 extractData();
+
+async function openPage(){
+    document.getElementById('destination').addEventListener("click",function(action){
+        if(action.target.classList.contains('card'))
+            window.location.href=
+
+
+    }
+}
     
     
     

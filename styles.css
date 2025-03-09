@@ -3,13 +3,35 @@
     font-family:'Rock Salt', cursive;
     display:flex;
     color:white;
-    text-shadow:2px 2px 4px black;
+   
     font-stretch:expanded;
     font-size:larger;
     flex-direction: column;
     justify-content:flex-start;
     align-items:center;
     margin-bottom:10px;
+    text-shadow: 2px 2px 4px black;
+
+    position:relative 
+
+}
+.title::after
+{
+    content:attr(title-name);
+    position:absolute;
+    top:0;
+    bottom:0;
+    background: linear-gradient(45deg, #ff61d2, #00ffff);
+    -webkit-background-clip: text;
+    background-clip:text;
+    color:transparent;
+    filter:blur(10px);
+    z-index:-1;
+    left:0;
+    right:0;
+    margin:auto;
+    width:100%;
+    height:100%;
 
 
 }
@@ -19,7 +41,7 @@ body{
     background-position:center center;
     background-repeat:no-repeat;
     min-height:100vh;
-    background-image:url('./DALL·E 2025-03-08 10.38.45 - A super minimalistic vintage-style dark background with a deep black or dark gray base. The design should have a hand-sketched, artistic look with sub.webp');
+    background-image:url('./DALL·E 2025-03-08 12.27.52 - A pitch-black background with a minimalistic, hand-sketched white city skyline at the bottom edge. Sparsely scattered, delicate white vinyl records an.webp');
     background-attachment: fixed;
 }
 
@@ -72,7 +94,7 @@ body{
     left: -5px;
     right: -5px;
     bottom: -5px;
-    background: linear-gradient(45deg, #008cff, #e100ff);
+    background: linear-gradient(45deg, #ff61d2, #00ffff);
     z-index: -1;
     border-radius: inherit;
 }
