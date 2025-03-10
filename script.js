@@ -72,6 +72,22 @@ cardData.style.backgroundImage=`url("${destinationData.image}")`;
 
 
     `
+    destinationData.itinerary.forEach(day=>{
+        cardData.innerHTML+=
+        `
+        <p>${day}<p>
+        
+        `
+    });
+
+    cardData.innerHTML+=
+    `
+    <p>Latitude: ${destinationData.details.location.latitude}</p>
+    <p>Longitude: ${destinationData.details.location.longitude}</p>
+
+
+    `
+
 
 
 
