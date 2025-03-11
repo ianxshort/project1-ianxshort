@@ -46,15 +46,15 @@ async function openPage(){
         document.getElementById('destination').addEventListener("click",function(action)
         {
 
-                let cardElement=action.target.closest('card');
+                let cardElement=action.target.closest('card');  //returns the closest element that is clicked to 
                 if(!cardElement)return; //if the user doesn't click anything just don't enact the function
                 let cardID= parseInt(cardElement.id); //set a variable equal to whatever the person clicked 
             let correctID=destData.find(destination=>destination.id===cardID); //this line will allow us to gain access to the specific object because of the find function
         
 
-            sessionStorage.setItem("locationData",JSON.stringify(correctID));
+            sessionStorage.setItem("locationData",JSON.stringify(correctID)); //saving locationDat as the stringified destination data (clicked on by the user)
             
-            window.location.href=`destination.html`;
+            window.location.href=`destination.html`; //now we will open up a new tab 
             
         });
     }
