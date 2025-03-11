@@ -45,27 +45,29 @@ async function openPage(){
         let fillData="";
         document.getElementById('destination').addEventListener("click",function(action)
         {
-            if(action.target.classList.contains('card'))
-                window.location.href=`destination.html`;
-            let cardID= parseInt(action.target.id); //set a variable equal to whatever the person clicked 
+
+                let cardElement=action.target.closest('card');
+                if(!cardElement)return; //if the user doesn't click anything just don't enact the function
+                let cardID= parseInt(cardElement.id); //set a variable equal to whatever the person clicked 
             let correctID=destData.find(destination=>destination.id===cardID); //this line will allow us to gain access to the specific object because of the find function
         
 
             sessionStorage.setItem("locationData",JSON.stringify(correctID));
             
             window.location.href=`destination.html`;
+            
         });
     }
-    catch(error)
-    {
+    catch(error){
         console.error("error fetching data", error);
     }
+    
+    
 }
 
-async function fillPage()
+function fillPage()
 {
-   try
-   {
+   
         let destinationData=JSON.parse(sessionStorage.getItem("locationData"));
         let cardData=document.getElementById(destinationData.id);
         cardData.style.backgroundImage=`url("${destinationData.image}")`;
@@ -74,9 +76,8 @@ async function fillPage()
         `
         <h2>${destinationData.name}</h2>
         <p>${destinationData.long_description}</p>
-
-
         `;
+
         let counter=1;
         destinationData.itinerary.forEach(day=>
         {
@@ -96,12 +97,7 @@ async function fillPage()
 
 
     `;
-    }
-    catch(error)
-    {
-        console.error("error fetching data", error);
-
-    }
+    
 }
 
 
