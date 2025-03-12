@@ -198,3 +198,38 @@ title h1{
 
 
 }
+
+.destpage{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    align-content:stretch;
+    background-size:cover;
+    background-position:center;
+    border-radius: 50px  20px;
+    padding:20px;
+    width:80;
+
+
+    position:relative;
+    overflow:visible; /* this will allow the gradient border to show up*/
+    text-align:center;
+
+
+
+
+
+}
+
+.destpage::after{
+    content: "";
+    position: absolute;
+    top: -5px; /* adjusting the thickness of the gradient borders*/
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ff61d2, #00ffff);
+    z-index: -1;
+    border-radius: inherit;
+}
