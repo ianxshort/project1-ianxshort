@@ -208,14 +208,15 @@ title h1{
     background-size:cover;
     background-position:center;
     border-radius: 50px  20px;
-    padding:20px;
-    width:80;
+    padding:10px;
+    width:80vw;
+    height:50vh;
 
 
     position:relative;
     overflow:visible; /* this will allow the gradient border to show up*/
     text-align:center;
-
+   
 
 
 
@@ -232,4 +233,64 @@ title h1{
     background: linear-gradient(45deg, #ff61d2, #00ffff);
     z-index: -1;
     border-radius: inherit;
+}
+
+.destpage::before{
+    content:"";
+    width:100%;
+    height:65%;
+    bottom:0;
+    left:0;
+    position:absolute;
+    border-radius: 0 0 50px 20px; 
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+.destpage h2{
+    margin-bottom:50px;
+    color:white;
+    z-index:1;
+    font-size:32px;
+}
+
+    
+    
+
+.destpage p{
+    color:white;
+    z-index:1;
+    margin-top:8px;
+    margin-bottom:8px;
+  
+    
+}
+
+.destpage img{
+  
+    background-size: cover;
+    background-position: center;
+    
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+@media screen and (max-width:860px)
+{
+    .destpage h2{
+        font-size:28px;
+        margin-bottom:40px;
+    }
+    .destpage p{
+    font-size: 16px;
+    margin-top:5px;
+    margin-bottom:5px;
+    
+    }
+    .destpage::before{
+        height:70%;
+
+    }
+    
+
 }

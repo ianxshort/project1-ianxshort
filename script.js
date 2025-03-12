@@ -54,7 +54,7 @@ async function openPage(){
 
             sessionStorage.setItem("locationData",JSON.stringify(correctID)); //saving locationDat as the stringified destination data (clicked on by the user)
             setTimeout(()=>{
-                window.location.href= "desination.html"; //now we will open up a new tab 
+                window.location.href= "destination.html"; //now we will open up a new tab 
             },100);
 
             
@@ -72,27 +72,28 @@ function fillPage()
 {
    
         let destinationData=JSON.parse(sessionStorage.getItem("locationData"));
-        let cardData=document.getElementById(destinationData.id);
+        let cardData=document.getElementById("destination-info");
         cardData.style.backgroundImage=`url("${destinationData.image}")`;
 
-        cardData.innerHTML+=
+        let htmlContent=
         `
         <h2>${destinationData.name}</h2>
-        <p>${destinationData.long_description}</p>
+        <p>${destinationData.details.long_description}</p>
         `;
 
-        let counter=1;
-        destinationData.itinerary.forEach(day=>
+       
+        destinationData.details.itinerary.forEach(day=>
         {
-            cardData.innerHTML+=
+            htmlContent+=
             `
-            <p>Day ${counter} ${day}</p>
+            <p>${day}</p>
+            
             
             `;
-            counter++;
+            
         });
 
-    cardData.innerHTML+=
+    htmlContent+=
     `
 
     <p>Latitude: ${destinationData.details.location.latitude}</p>
@@ -100,6 +101,9 @@ function fillPage()
 
 
     `;
+    cardData.innerHTML=htmlContent;
+
+
     
 }
 
