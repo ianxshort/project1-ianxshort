@@ -1,6 +1,7 @@
 .title{
     text-align:center;
-    font-family:'Rock Salt';
+    font-family: Impact, sans-serif;
+
     display:flex;
     color:white;
    
@@ -14,12 +15,13 @@
     position:relative;
     width:100%;
     background-color:black;
-    background-image:url('./freepik__adjust__2.png');
+    background-image:url('./freepik__adjust__79267.png');
     background-position:center top;
     height:10vh;
     top:0;
     margin:0;
     padding:0;
+    border:5px double rgb(0, 255, 255);
 
 }
 html, body{
@@ -39,7 +41,7 @@ body{
     background-repeat:no-repeat;
     background-attachment: fixed;
     background-color:white;
-    background-image:url('./freepik__adjust__59689.png');
+    background-image:url('./freepik__upload__9903.png');
 
 
 }
@@ -55,9 +57,10 @@ main{
      background-color:rgb(248, 248, 248);
      width:100%;
      padding:10px;
-     background-image:url('./freepik__adjust__2.png');
+     background-image:url('./freepik__upload__9903.png');
 
-     
+     border:5px double rgb(0, 255, 255);
+
  
  }
 
@@ -152,8 +155,21 @@ main{
 
 }
 
+.card::before {
+    content: "";
+    position: absolute; /* positions the transparent text box relative to the card */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; 
+    background: rgba(0, 0, 0, 0.7);  /* 0.7 is the opacity*/
+    border-radius: 0 0 50px 20px; 
+}
+
 title h1{
     font-size:40px;
+    color: cyan;
+  text-shadow: 0 0 10px cyan, 0 0 20px pink;
 
 
 }
