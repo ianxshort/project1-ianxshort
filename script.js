@@ -64,6 +64,7 @@ async function openPage(){
     
     
 }
+openPage(); //this executes after the reponse 
 
 function fillPage()
 {
