@@ -46,15 +46,17 @@ async function openPage(){
         document.getElementById('destination').addEventListener("click",function(action)
         {
 
-                let cardElement=action.target.closest('card');  //returns the closest element that is clicked to 
+                let cardElement=action.target.closest('.card');  //returns the closest element that is clicked to 
                 if(!cardElement)return; //if the user doesn't click anything just don't enact the function
                 let cardID= parseInt(cardElement.id); //set a variable equal to whatever the person clicked 
             let correctID=destData.find(destination=>destination.id===cardID); //this line will allow us to gain access to the specific object because of the find function
         
 
             sessionStorage.setItem("locationData",JSON.stringify(correctID)); //saving locationDat as the stringified destination data (clicked on by the user)
-            
-            window.location.href=`destination.html`; //now we will open up a new tab 
+            setTimeout(()=>{
+                window.location.href= "desination.html"; //now we will open up a new tab 
+            },100);
+
             
         });
     }
@@ -105,36 +107,6 @@ function fillPage()
 
 
 
-
-let destinationData=JSON.parse(sessionStorage.getItem("locationData"));
-let cardData=document.getElementById(destinationData.id);
-cardData.style.backgroundImage=`url("${destinationData.image}")`;
-
-    cardData.innerHTML+=
-    `
-    <h2>${destinationData.name}</h2>
-    <p>${destinationData.long_description}</p>
-
-
-    `
-    let counter=1;
-    destinationData.itinerary.forEach(day=>{
-        cardData.innerHTML+=
-        `
-        <p>Day ${counter} ${day}</p>
-        
-        `;
-        counter++;
-    });
-
-    cardData.innerHTML+=
-    `
-
-    <p>Latitude: ${destinationData.details.location.latitude}</p>
-    <p>Longitude: ${destinationData.details.location.longitude}</p>
-
-
-    `;
 
 
 
