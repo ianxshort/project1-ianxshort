@@ -360,10 +360,12 @@ title h1{
     position:relative;
     min-height: 200px; 
     max-width: 50vw;
-    margin: auto;
+    margin: 0 auto;
     margin-top:5px;
     border: 2px solid transparent; 
     border-radius:20px;
+    margin-left:0;
+    margin-right:auto;
    
 
 }
@@ -383,6 +385,7 @@ title h1{
         width:90%;
         flex:0 0 auto;
         margin:10px auto;
+
     }
     .destpage h2{
         padding:25px;
@@ -400,6 +403,8 @@ title h1{
         min-height:350px;
         height:55vh;
         margin:10px auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
@@ -413,6 +418,10 @@ title h1{
         font-size:12px;
         padding:0;
         
+    }
+    #map{
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
