@@ -199,6 +199,23 @@ title h1{
 
 }
 
+
+
+/* Destination page */
+#destination-details {  
+    width: 90vw;
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    margin: auto;
+    padding: 20px;
+    flex-wrap:wrap;
+    padding:5vh 5vw;
+    margin-top:3vh;
+    gap:1%;
+   
+}
+
 .destpage{
     display:flex;
     flex-direction:column;
@@ -209,9 +226,9 @@ title h1{
     background-position:center;
     border-radius: 50px  20px;
     padding:10px;
-    width:80vw;
+    flex:0 0 60%;
     height:50vh;
-
+    max-width:60%;
 
     position:relative;
     overflow:visible; /* this will allow the gradient border to show up*/
@@ -222,6 +239,7 @@ title h1{
 
 
 }
+/* gradient border*/
 
 .destpage::after{
     content: "";
@@ -235,6 +253,8 @@ title h1{
     border-radius: inherit;
 }
 
+
+/* text box*/
 .destpage::before{
     content:"";
     width:100%;
@@ -253,14 +273,11 @@ title h1{
     font-size:32px;
 }
 
-    
-    
-
 .destpage p{
     color:white;
     z-index:1;
-    margin-top:8px;
-    margin-bottom:8px;
+    margin-top:6px;
+    margin-bottom:6px;
   
     
 }
@@ -275,22 +292,81 @@ title h1{
     background-attachment: fixed; 
 }
 
+
+.booking {
+    flex: 0 0 30%; /* Takes up 30% of width */
+    max-width:30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255, 97, 210, 0.9);
+    text-align: center;
+    border: 5px double black;
+    padding: 20px;
+    height: 50vh;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Booking form text */
+.booking h2 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.booking label {
+    display: block;
+    margin: 10px 0 5px;
+    color: white;
+}
+
+.booking input, .booking select {
+    width: 70%;
+    padding: 6px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.booking button {
+    width: 80%;
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.booking button:hover {
+    background: #ff3cb0;
+}
+
 @media screen and (max-width:860px)
 {
+    #destination{
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+    .destpage,.booking{
+        width:90%;
+        flex:0 0 auto;
+        margin:10px auto;
+    }
     .destpage h2{
-        font-size:28px;
-        margin-bottom:40px;
+        font-size:24px;
     }
     .destpage p{
-    font-size: 16px;
-    margin-top:5px;
-    margin-bottom:5px;
-    
+        font-size:14px;
     }
-    .destpage::before{
-        height:70%;
-
+    .destpage::before
+    {
+        height:72%;
     }
-    
 
 }
+

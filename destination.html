@@ -11,14 +11,41 @@
     <header class ="title" title-name="Beats & Destinations">
         <h1><strong>Beats & Destinations</strong></h1>
     </header>
-    <section id="destination">
-   
-        <div class ="destpage" id="destination-info"></div>
     
+    <section id="destination-details">
+        
+        <div class ="destpage" id="destination-info"></div>
 
 
 
-    </section>
+    
+    <div class="booking">
+    <label for="dest">Select your Destination:</label>
+    <select name="destinations" id="dest">
+        <option value="Miami">Miami</option>
+        <option value="Berlin">Berlin</option>
+        <option value="Ibiza">Ibiza</option>
+        <option value="São Paulo">São Paulo</option>
+    </select>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required placeholder="Enter your name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required placeholder="Enter your email">
+
+        <label for="travelers">Number of Travelers</label>
+        <input type="number" id="travelers" required min="1" value="1">
+
+        <label for="date">Travel Date</label>
+        <input type="date" id="date" required>
+
+        <button type="submit">Book Now</button>
+
+    </div>  
+
+</section>
+   
+    
     <script src="script.js"></script>
     <script>
         fillPage();
