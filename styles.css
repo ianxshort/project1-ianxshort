@@ -259,7 +259,7 @@ title h1{
 .destpage::before{
     content:"";
     width:100%;
-    height:65%;
+    height:67%;
     bottom:0;
     left:0;
     position:absolute;
@@ -272,9 +272,6 @@ title h1{
     color:white;
     z-index:1;
     font-size:32px;
-    word-wrap:break-word;
-    overflow:hidden;
-    white-space:normal;
 }
 
 .destpage p{
@@ -282,9 +279,6 @@ title h1{
     z-index:1;
     margin-top:6px;
     margin-bottom:6px;
-    word-wrap:break-word;
-    overflow:hidden;
-    white-space:normal;
   
     
 }
@@ -309,11 +303,13 @@ title h1{
     align-items: center;
     background-color: rgba(255, 97, 210, 0.9);
     text-align: center;
-    border: 5px double black;
+    border: 2px solid white;
     padding: 20px;
     height: 50vh;
+    
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Booking form text */
 .booking h2 {
@@ -359,16 +355,20 @@ title h1{
     display:flex;
     align-self:left;
     position:relative;
-    z-index:1;
     min-height: 200px; 
     max-width: 50vw;
     margin: auto;
-    border: 5px solid black; 
+    border: 2px solid transparent; 
+    border-radius:20px;
+   
 
 }
 
 
-@media screen and (max-width:860px)
+
+
+
+@media screen and (max-width:900px)
 {
     #destination{
         flex-direction:column;
@@ -381,19 +381,34 @@ title h1{
         margin:10px auto;
     }
     .destpage h2{
+        padding:25px;
         font-size:24px;
     }
     .destpage p{
         font-size:14px;
+        
     }
     .destpage::before
     {
-        height:72%;
+        height:67%;
     }
     #map{
-        min-height:300px;
-        height:50vh;
+        min-height:350px;
+        height:55vh;
+        margin:10px auto;
     }
 
+}
+@media screen and (max-width:675px)
+{
+    .destpage::before
+    {
+        height:62%;
+    }
+    .destpage p{
+        font-size:12px;
+        padding:0;
+        
+    }
 }
 

@@ -117,10 +117,64 @@ function fillPage()
         .openPopup();
 
 }
-document.querySelector('.booking button[type="submit"').addEventListener('click',function(action){
+document.querySelector('.booking button[type="submit"]').addEventListener('click',function(action){
 action.preventDefault();
-    const destination=document.getElemenentById("dest").value;
-    
+
+const destination = document.getElementById("dest").value;
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const travelers = document.getElementById("travelers").value;
+const travelDate = document.getElementById("date").value;
+
+
+    const currentDate=new Date().toISOString().split('T')[0]; //getting the date splitting it into a string with the correct format and splitting the timestamp 
+    if(!destination || !name ||!email || !travelers || !travelDate)
+    {
+        alert("Please fill out the entire form");//if they missed filling out something send the message 
+        return;
+    }
+
+    if(travelDate<currentDate)
+    {
+        alert("Cannot choose a date earlier then today");
+    }
+
+    if(travelers<1)
+    {
+        alert("The amount of travelers has to at least be 1 ");
+    }
+    console.log("Details");
+    console.log("Destination:", destination);
+    console.log("Name:", name);
+    console.log("Email: ", email);
+    console.log("Travlers: ", travelers);
+    console.log("Date of Travel: ", travelDate);
+
+    alert('Tour Booked!');
+    document.getElementById('dest').value='';
+    document.getElementById('name').value='';
+    document.getElementById('email').value='';
+    document.getElementById('travelers').value=1;
+    document.getElementById('date').value='';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
