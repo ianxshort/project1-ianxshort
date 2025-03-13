@@ -297,7 +297,7 @@ title h1{
 
 
 .booking {
-    flex: 0 0 30%; /* Takes up 30% of width */
+    flex: 0 0 30%; 
     max-width:30%;
     display: flex;
     flex-direction: column;

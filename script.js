@@ -193,16 +193,7 @@ const travelDate = document.getElementById("date").value;
 
 
 
-// let cardID=action.target
-//const cardData=document.getElementById(action.target );
-//  cardData.style.backgroundImage = `url("${destination.image}")`;
-/*cardData.innerHTML=
-`
-    <h2>${destination.name}</h2>
-    <p>${destination.description}</p>
 
-`;
-*/
 
 
 
