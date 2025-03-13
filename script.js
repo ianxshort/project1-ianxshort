@@ -70,7 +70,6 @@ openPage(); //this executes after the reponse
 
 function fillPage()
 {
-   
         let destinationData=JSON.parse(sessionStorage.getItem("locationData"));
         let cardData=document.getElementById("destination-info");
         cardData.style.backgroundImage=`url("${destinationData.image}")`;
@@ -104,8 +103,31 @@ function fillPage()
     cardData.innerHTML=htmlContent;
 
 
-    
+    let map = L.map("map").setView(
+        [destinationData.details.location.latitude, destinationData.details.location.longitude], 10
+    );
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "&copy; OpenStreetMap contributors"
+    }).addTo(map);
+
+    L.marker([destinationData.details.location.latitude, destinationData.details.location.longitude])
+        .addTo(map)
+        .bindPopup(`<b>${destinationData.name}</b>`)
+        .openPopup();
+
 }
+document.querySelector('.booking button[type="submit"').addEventListener('click',function(action){
+action.preventDefault();
+    const destination=document.getElemenentById("dest").value;
+    
+
+
+
+
+
+
+})
 
 
 

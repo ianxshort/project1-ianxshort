@@ -234,6 +234,7 @@ title h1{
     overflow:visible; /* this will allow the gradient border to show up*/
     text-align:center;
    
+    word-wrap:break-word;
 
 
 
@@ -271,6 +272,9 @@ title h1{
     color:white;
     z-index:1;
     font-size:32px;
+    word-wrap:break-word;
+    overflow:hidden;
+    white-space:normal;
 }
 
 .destpage p{
@@ -278,6 +282,9 @@ title h1{
     z-index:1;
     margin-top:6px;
     margin-bottom:6px;
+    word-wrap:break-word;
+    overflow:hidden;
+    white-space:normal;
   
     
 }
@@ -328,6 +335,9 @@ title h1{
     border: 2px solid #ccc;
     border-radius: 6px;
     font-size: 14px;
+    word-wrap:break-word;
+    overflow:hidden;
+    white-space:normal;
 }
 
 .booking button {
@@ -344,6 +354,19 @@ title h1{
 .booking button:hover {
     background: #ff3cb0;
 }
+#map{
+    width:100%;
+    display:flex;
+    align-self:left;
+    position:relative;
+    z-index:1;
+    min-height: 200px; 
+    max-width: 50vw;
+    margin: auto;
+    border: 5px solid black; 
+
+}
+
 
 @media screen and (max-width:860px)
 {
@@ -366,6 +389,10 @@ title h1{
     .destpage::before
     {
         height:72%;
+    }
+    #map{
+        min-height:300px;
+        height:50vh;
     }
 
 }
